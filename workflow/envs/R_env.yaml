@@ -1,0 +1,11 @@
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+  - r
+dependencies:
+  - bioconductor-dada2 =1.26.0
+  - r-tidyr
+  - r-ggplot2
+  - r-ggpubr
+  - r-stringr

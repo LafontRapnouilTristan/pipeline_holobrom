@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Author: Lafont Rapnouil Tristan
+#Last update: 05.12.2022
+
+# what does it do
+# Take an undereplicated fasta file with "sample=insert.sample.name;" attribute and count the number of unique sequence 
+
+fastafile=$1
+txtfile=$2
+
+awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' $fastafile | awk '$1 ~ ">M" {a=$0;next;} $1 ~ "[a-z]" {print a $0} ' | grep -o -P 'sample=.*?;|[a-z]{100,}' | awk '$1 ~ "sample" {a=$0;next;} $1 ~ "[a-z]" {print a $0}' | sort | uniq -c | sed -E 's/;[a-z]+$//g' | sed -e 's/^[ \t]*//' | awk -F' ' '{a[$2]+=$1}END{for(i in a) print i,a[i]}' | sed -e 's/ /\t/g' | sed -e 's/sample=//g' | sort > $txtfile

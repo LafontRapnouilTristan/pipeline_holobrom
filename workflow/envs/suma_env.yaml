@@ -1,0 +1,6 @@
+name: sumaclust
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - sumaclust

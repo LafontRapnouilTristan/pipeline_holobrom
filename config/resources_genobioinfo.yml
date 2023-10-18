@@ -1,0 +1,59 @@
+__default__:
+  jobname: "default"
+  mem: "26G"
+  cpus: 10
+  time: "15:00:00"
+  partition: "workq"
+
+## pairing ##
+split_fastq:
+    jobname: "split_fastq"
+    mem: "1G"
+pairing:
+    jobname: "pairing"
+    mem: "26G"
+    cpus: 30
+    time: "20:00:00"
+## alignment sorting ##
+alifilt:
+    jobname: "alifilt"
+    mem: "26G"
+    time: "15:00:00"
+## demultiplex ##
+demultiplex:
+    jobname: "demultiplex"
+    mem: "26G"
+    cpus: 30
+    time: "15:00:00"
+## basic filtration ##
+basicfilt:
+    jobname: "basicfilt"
+    time: "15:00:00"
+## dereplication ##
+derepl:
+    jobname: "derepl"
+    mem: "26G"
+    cpus: 40
+    time: "15:00:00"
+## otu clustering ##
+otu_clust:
+    jobname: "otu_clust"
+    mem: "60G"
+    time: "20:00:00"
+    cpus: 30
+## merge clustering ##
+merge_clust:
+    jobname: "merge_clust"
+    mem: "60G"
+    time: "15:00:00"
+## format output ##
+tab_format:
+    jobname: "tab_format"
+    mem: "26G"
+    time: "15:00:00"
+## taxonomy assignments ##
+taxassign:
+    jobname: "taxassign"
+    cpus: 40
+    mem: "64G"
+    time: "15:00:00"

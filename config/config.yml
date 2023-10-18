@@ -1,0 +1,47 @@
+# general params
+general:
+    cores: 100
+reads_prime:
+    - R1
+    - R2
+tomerge:
+    TRUE
+resourcesfolder:
+    resources/
+resultsfolder:
+    results/
+benchmarksfolder:
+    benchmarks/
+fastqfiles:
+  - mother_ITS2
+  - seedling_ITS2
+  - jm_ITS2
+  - jm_ITS2_2
+mergedfile:
+    mergedITS2
+# split files
+split_fastq:
+    nfiles: 200
+# align filter
+alifilt:
+    minscore: 40
+# basic filt
+basicfilt:
+    minlength: 80
+    mincount: 1
+# dereplication
+dereplication:
+    simult_reads: 1000
+split_fasta:
+    nfiles: 25
+# Abundance filtering
+abb_filt: 
+    mincount: 1
+# clustering
+clustering:
+    minsim: 0.97
+    cores: 30
+# taxa
+taxassign:
+    tax_file_mergedITS2: taxonomy_database/sh_general_release_dynamic_16.10.2022.fasta
+    multithread: 10
