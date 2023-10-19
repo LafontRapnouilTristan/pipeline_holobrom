@@ -13,12 +13,12 @@ resultsfolder:
 benchmarksfolder:
     benchmarks/
 fastqfiles:
-  - mother_ITS2
-  - seedling_ITS2
-  - jm_ITS2
-  - jm_ITS2_2
+  - motherits2
+  - seedlingits2
+  - jmits2
+  - jmits2_2
 mergedfile:
-    mergedITS2
+    mergedits2
 # split files
 split_fastq:
     nfiles: 200
@@ -43,5 +43,5 @@ clustering:
     cores: 30
 # taxa
 taxassign:
-    tax_file_mergedITS2: taxonomy_database/sh_general_release_dynamic_16.10.2022.fasta
+    tax_file_mergedits2: taxonomy_database/sh_general_release_dynamic_16.10.2022.fasta
     multithread: 10

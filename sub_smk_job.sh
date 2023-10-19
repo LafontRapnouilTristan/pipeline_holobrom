@@ -9,7 +9,7 @@
 
 # Environment
 module purge
-module load bioinfo/snakemake-5.25.0
+module load bioinfo/snakemake-7.20.0
 module load system/Miniconda3-4.7.10
 
 # Variables
